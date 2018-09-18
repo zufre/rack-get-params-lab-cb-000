@@ -22,7 +22,7 @@ class Application
         end
       else
         resq.write "Your cart is empty"
-    elsif req.path.match(\add\)
+    elsif req.path.match(/add/)
       newItem = req.params["item"]
       if @@items.includes?(newItem)
         @@cart << newItem
@@ -31,7 +31,7 @@ class Application
         resp.write "We don't have that item"
       end
     else
-      
+
       resp.write "Path Not Found"
     end
 
