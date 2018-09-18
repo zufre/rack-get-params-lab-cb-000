@@ -21,7 +21,7 @@ class Application
           resq.write "#{item}\n"
         end
       else
-        resq.write "Your cart is empty"
+        resp.write "Your cart is empty"
       end
     elsif req.path.match(/add/)
       newItem = req.params["item"]
